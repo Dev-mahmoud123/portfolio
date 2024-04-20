@@ -1,0 +1,162 @@
+/* ================ Google Fonts ================= */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600&family=Lexend:wght@200;300;400;500;600&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap");
+
+/* =============== Css Variables =============== */
+
+:root {
+  --first-color: rgb(138, 44, 226);
+  --title-color: rgb(102, 102, 102);
+  --text-color: rgb(128, 128, 128);
+  --body-color: rgb(255, 255, 255);
+  --container-color: rgb(230, 230, 230);
+  --border-color: rgb(204, 204, 204);
+  --text-white: #fff;
+  --dark-color: #000;
+
+  --body-font: "Open Sans", sans-serif;
+  --second-font: "Poppins", sans-serif;
+  --big-font-size: 56px;
+  --h1-font-size: 50px;
+  --h2-font-size: 32px;
+  --h3-font-size: 24px;
+  --large-font-size: 18px;
+  --medium-font-size: 16px;
+  --small-font-size: 15px;
+  --smaller-font-size: 14px;
+  --tiny-font-size: 12px;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-medium);
+}
+body {
+  background-color: var(--body-color);
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--weight-bold);
+  font-family: var(--second-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.section {
+  padding-block: 50px;
+}
+.section__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--title-color);
+  font-weight: var(--weight-bold);
+}
+
+/* ================== Reusable Css Button =============== */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--first-color);
+  color: var(--dark-color);
+  width: 200px;
+  padding: 10px 0 10px 10px;
+  border-radius: 50px;
+  font-family: var(--second-font);
+  font-weight: var(--medium-weight);
+  font-size: var(--small-font-size);
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+  background-color: transparent;
+}
+.button::before {
+  position: absolute;
+  content: "";
+  background-color: var(--first-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  inset: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.button:hover {
+  color: var(--text-white);
+}
+.button:hover::before {
+  transform: translateX(0);
+}
+.button span {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  background-color: var(--first-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.button span .icon {
+  color: var(--text-white);
+  font-size: var(--medium-font-size);
+}
+
+hr {
+  background-color: var(--border-color);
+  height: 0.5px;
+  width: 30%;
+  margin: auto;
+}
+
+.separator {
+  width: 30%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: auto;
+}
